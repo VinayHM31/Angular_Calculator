@@ -1,0 +1,265 @@
+<div class="min-w-screen
+min-h-screen
+bg-teal-900
+flex
+flex-col
+items-center
+
+px-5
+py-5">
+  <div class="w-full
+    mx-auto
+    rounded-md
+    shadow-xl
+    text-gray-800
+    relative
+    overflow-hidden" style="max-width: 350px">
+    <h1 class="text-center text-white py-10 text-3xl font-bold">Angular Calculator</h1>
+  </div>
+  <div class="w-full
+  rounded-md
+      h-30
+      bg-gradient-to-b
+      from-gray-800
+      to-gray-700
+      text-right
+      shadow-2xl" style="max-width: 350px">
+    <div class="w-full
+          h-0
+          py-5
+          px-6
+          text-2xl
+          text-white
+          font-thin">
+      <!-- {{funcT}} -->
+    </div>
+    <div class="w-full
+        py-5
+        px-6
+        text-white
+        text-2xl">
+      {{calValue | number}}
+    </div>
+    <div class="flex w-full">
+      <div class="w-2/4 bg-red-600">
+        <button class="w-full
+                h-16
+                bg-red-600
+                outline-none
+                hover:bg-red-400 hover:bg-opacity-30
+                text-white
+                hover:text-black
+                text-opacity-50
+                text-4xl
+                hover:text-3xl
+                font-light" (click) = "onClickValue('c', 'function' )"> c </button>
+      </div>
+      <div class="w-1/4 ">
+        <button class="w-full
+                h-16
+                outline-none
+                hover:bg-black hover:bg-opacity-20
+                text-green-500
+                text-3xl
+                hover:text-2xl" (click) = "onClickValue('%', 'function' )"> % </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+                h-16
+                outline-none
+                hover:bg-black hover:bg-opacity-20
+                text-white
+                text-green-500
+                text-3xl
+                hover:text-2xl" (click) = "onClickValue('/', 'function' )"> / </button>
+      </div>
+    </div>
+    <!-- end first button row -->
+
+    <!-- start second button area -->
+    <div class="flex w-full">
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('7', 'number' )"> 7 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('8', 'number' )"> 8 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('9', 'number' )"> 9 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-green-500
+              hover:text-2xl
+              text-3xl" (click) = "onClickValue('*', 'function' )"> x </button>
+      </div>
+    </div>
+
+    <div class="flex w-full">
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('4', 'number' )"> 4 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('5', 'number' )"> 5 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('6', 'number' )"> 6 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-green-500
+              text-3xl
+              hover:text-2xl" (click) = "onClickValue('-', 'function' )"> - </button>
+      </div>
+    </div>
+
+    <div class="flex w-full">
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('1', 'number' )"> 1 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light"(click) = "onClickValue('2', 'number' )"> 2 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('3', 'number' )"> 3 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-green-500
+              text-3xl
+              hover:text-2xl" (click) = "onClickValue('+', 'function' )"> + </button>
+      </div>
+    </div>
+    <div class="flex w-full">
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light"> +/- </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('0', 'number' )"> 0 </button>
+      </div>
+      <div class="w-1/4">
+        <button class="w-full
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-black hover:bg-opacity-20
+              text-white
+              text-3xl
+              hover:text-2xl
+              font-light" (click) = "onClickValue('.', 'function' )"> . </button>
+      </div>
+      <div class="w-1/4 ">
+        <button class="w-full
+              rounded-br-md
+              bg-green-600
+              h-16
+              outline-none
+              focus:outline-none
+              hover:bg-green-200 hover:bg-opacity-30
+              text-white
+              text-4xl
+              hover:text-2xl" (click) = "onClickValue('=', 'function' )"> = </button>
+      </div>
+    </div>
+  </div>
+</div>
